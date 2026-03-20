@@ -4,3 +4,6 @@ In GPS-denied environments, a cognitive drone for search-and-rescue missions can
 
 ![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/LLM_Agent_0.jpg)
 
+LLM-guided multi-agent UAV navigation scenario with three cooperative drones: a leader, a left follower, and a right follower. The top row shows the onboard camera views of each agent, while the middle row presents their individual HUDs with flight status, clearance, RMSE, and control mode. The bottom panel displays the swarm scenario map, including the planned path, executed trajectories, and relative formation behavior. In this example, the agents maintain coordinated navigation under a shared safe-mode policy, while the leader drives the mission and the followers adapt their motion to preserve formation and avoid obstacles. This setup highlights how LLM-based decision support can improve cooperative tracking, situational awareness, and robust multi-agent navigation in cluttered environments.
+
+![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/LLM_Multi-Agent_3.jpg)
