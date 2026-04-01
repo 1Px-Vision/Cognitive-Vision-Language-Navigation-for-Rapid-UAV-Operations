@@ -7,3 +7,32 @@ In GPS-denied environments, a cognitive drone for search-and-rescue missions can
 LLM-guided multi-agent UAV navigation scenario with three cooperative drones: a leader, a left follower, and a right follower. The top row shows the onboard camera views of each agent, while the middle row presents their individual HUDs with flight status, clearance, RMSE, and control mode. The bottom panel displays the swarm scenario map, including the planned path, executed trajectories, and relative formation behavior. In this example, the agents maintain coordinated navigation under a shared safe-mode policy, while the leader drives the mission and the followers adapt their motion to preserve formation and avoid obstacles. This setup highlights how LLM-based decision support can improve cooperative tracking, situational awareness, and robust multi-agent navigation in cluttered environments.
 
 ![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/LLM_Multi-Agent_3.jpg)
+
+### Hit: You ran the wslconfig command-line program, not the .wslconfig settings file. Microsoft documents .wslconfig as a text file in your Windows user profile that applies global WSL settings, while WSL management commands are handled through wsl.exe; Microsoft also notes those old management options were consolidated into wsl.
+
+Do this in Windows PowerShell or CMD:
+````
+notepad %UserProfile%\.wslconfig
+````
+Paste this:
+````
+[wsl2]
+networkingMode=mirrored
+firewall=true
+dnsTunneling=true
+autoProxy=true
+````
+Then save the file. The file must be named exactly .wslconfig, not .wslconfig.txt. Microsoft says networkingMode=mirrored is configured under [wsl2] in .wslconfig, and that mirrored mode is available on Windows 11 22H2 and later.
+
+Then restart WSL completely:
+````
+wsl --shutdown
+wsl --status
+````
+After reopening Kali/Ubuntu, test again:
+````
+ip addr
+ip route
+nc -vz 192.168.137.10 22
+ssh ubuntu@192.168.137.10
+````
