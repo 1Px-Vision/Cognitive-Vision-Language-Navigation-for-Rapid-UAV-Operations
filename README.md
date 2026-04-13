@@ -1,6 +1,6 @@
 # Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations
 
-In GPS-denied environments, a cognitive drone for search-and-rescue missions can interpret high-level human instructions and transform them into actionable navigation decisions in real time. Using a LLM navigation framework, the UAV allows operators to issue free-form commands such as “go to the far corridor, then approach the victim,” even under time pressure and in unfamiliar, cluttered environments. Rather than treating navigation as a pure text-generation problem, the cognitive drone performs 2D spatial grounding, linking semantic instructions directly to visual regions in its first-person RGB view. Through this process, the vision–language model incrementally converts ambiguous commands into grounded 2D waypoint cues, which are then combined with estimated travel distance to produce 3D motion commands for the UAV.
+In GPS-denied environments, a cognitive drone for search-and-rescue missions can interpret high-level human instructions and transform them into actionable navigation decisions in real time. Using an LLM navigation framework, the UAV allows operators to issue free-form commands such as “go to the far corridor, then approach the victim,” even under time pressure and in unfamiliar, cluttered environments. Rather than treating navigation as a pure text-generation problem, the cognitive drone performs 2D spatial grounding, linking semantic instructions directly to visual regions in its first-person RGB view. Through this process, the vision–language model incrementally converts ambiguous commands into grounded 2D waypoint cues, which are then combined with estimated travel distance to produce 3D motion commands for the UAV.
 
 ![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/LLM_Agent_0.jpg)
 
@@ -41,4 +41,7 @@ ssh ubuntu@192.168.137.10
 Python-based drone simulation and control framework that combines a Language Agent, Agent-level DQN decision making, and FPGA-accelerated drone emulation over a TCP communication link. The system is designed for GPS-denied autonomous navigation, where the simulated drone operates inside a virtual environment while perception, planning, and control are coordinated between software intelligence and hardware-assisted emulation.
 
 At the core of the architecture, a task prompt is processed by a Language Agent that integrates an LLM with a DQN-based decision layer to generate high-level navigation and control actions. These actions are exchanged with an external FPGA-based drone emulation model, enabling fast hardware-assisted computation and realistic closed-loop interaction. On the simulator/control host, the framework provides real-time monitoring through multiple visual scopes, including a GPS-denied visual-inertial navigation view, front navigation camera, front-depth perception, and an online front-depth SLAM map.
+
+![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/FPGA_Sim.jpg)
+
 
