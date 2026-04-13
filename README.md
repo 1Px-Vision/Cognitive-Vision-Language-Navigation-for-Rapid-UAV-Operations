@@ -36,3 +36,4 @@ ip route
 nc -vz 192.168.137.10 22
 ssh ubuntu@192.168.137.10
 ````
+## Hybrid AI–FPGA Architecture
