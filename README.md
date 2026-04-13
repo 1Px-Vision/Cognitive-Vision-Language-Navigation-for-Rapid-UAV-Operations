@@ -44,4 +44,14 @@ At the core of the architecture, a task prompt is processed by a Language Agent 
 
 ![](https://github.com/1Px-Vision/Cognitive-Vision-Language-Navigation-for-Rapid-UAV-Operations/blob/main/FPGA_Sim.jpg)
 
+This platform is intended for research and development in:
+
+* Autonomous drone navigation.
+* GPS-denied visual-inertial SLAM.
+* LLM-guided robotic decision making.
+* Reinforcement learning for control.
+* FPGA/KRIA-based hardware acceleration.
+* Real-Time simulation and human-interpretable monitoring.
+
+
 
