@@ -37,3 +37,8 @@ nc -vz 192.168.137.10 22
 ssh ubuntu@192.168.137.10
 ````
 ## Hybrid AI–FPGA Architecture
+
+Python-based drone simulation and control framework that combines a Language Agent, Agent-level DQN decision making, and FPGA-accelerated drone emulation over a TCP communication link. The system is designed for GPS-denied autonomous navigation, where the simulated drone operates inside a virtual environment while perception, planning, and control are coordinated between software intelligence and hardware-assisted emulation.
+
+At the core of the architecture, a task prompt is processed by a Language Agent that integrates an LLM with a DQN-based decision layer to generate high-level navigation and control actions. These actions are exchanged with an external FPGA-based drone emulation model, enabling fast hardware-assisted computation and realistic closed-loop interaction. On the simulator/control host, the framework provides real-time monitoring through multiple visual scopes, including a GPS-denied visual-inertial navigation view, front navigation camera, front-depth perception, and an online front-depth SLAM map.
+
